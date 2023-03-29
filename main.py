@@ -1,5 +1,5 @@
 """
-KawaLove app - create database of cafes in Poznan and remote workers' reviews who work there.
+KawaLove app - website with database of cafes in Poznan and remote workers' reviews who work there.
 
 """
 
