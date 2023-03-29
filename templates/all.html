@@ -1,0 +1,82 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{% include "header.html" %}
+
+        <section class="page-section">
+            <div class="container">
+                <div class="col-xl-10 col-lg-9 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <div class="container w-75 p-5 wtf-form">
+                            {{ wtf.quick_form(form, novalidate=True) }}
+                        </div>
+                        <h4 class="p-2">Sprawdź najlepsze!</h4>
+                        <div class="row">
+                        {% for cafe in cafes %}
+                            <div class="card col-lg-4 show-card">
+                                <div class="cafe-img-container">
+                                <div class="cafe-img">
+                                        <img class="card-img-top" src="{{ url_for('static', filename='assets/img/cafes/{}.jpg'.format(cafe.id) ) }}" alt="Card image cap">
+                                </div>
+                                <div id="cafe-score-button-all">
+                                    <a class=" btn btn-primary btn-xl" href="{{ url_for('show_cafe', cafe_id=cafe.id) }}">
+                                        {% if cafe.avg_rating %}
+                                            {{ cafe.avg_rating }}
+                                        {% else %}
+                                            Oceń pierwszy!
+                                        {% endif %}
+                                    </a>
+                                </div>
+                                </div>
+                              <div class="card-body">
+                                <h5 class="card-title"> {{ cafe.name }} </h5>
+                                <p>{{ cafe.location }}</p>
+                              </div>
+                              <ul class="list-group list-group-flush">
+                                <li class="list-group-item card-list-item">
+                                    <p class="w-50">Kawa:</p>
+                                    <p class="w-50">
+                                        {% if cafe.avg_coffee %}
+                                            {{ cafe.avg_coffee }}
+                                        {% else %}
+                                            Oceń pierwszy!
+                                        {% endif %}
+                                    </p>
+                                </li>
+                                <li class="list-group-item card-list-item">
+                                    <p class="w-50">Wifi:</p>
+                                    <p class="w-50">
+                                        {% if cafe.avg_wifi %}
+                                            {{ cafe.avg_wifi }}
+                                        {% else %}
+                                            Oceń pierwszy!
+                                        {% endif %}
+                                    </p>
+                                </li>
+                                <li class="list-group-item card-list-item">
+                                    <p class="w-50">Gniazdka:</p>
+                                    <p class="w-50">
+                                        {% if cafe.avg_power %}
+                                            {{ cafe.avg_power }}
+                                        {% else %}
+                                            Oceń pierwszy!
+                                        {% endif %}
+                                    </p>
+                                </li>
+                              </ul>
+                              <div class="card-body card-buttons">
+                                  <a class="btn btn-primary btn-xl w-50 m-2" href="{{ url_for('show_cafe', cafe_id=cafe.id) }}">
+                                      Sprawdź
+                                  </a>
+                                  <a class="btn btn-primary btn-xl w-50 m-2" href="{{ cafe.map_url }}">
+                                      Mapka
+                                  </a>
+                              </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% include "footer.html" %}
