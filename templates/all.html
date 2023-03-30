@@ -2,16 +2,16 @@
 {% include "header.html" %}
 
         <section class="page-section">
-            <div class="container">
-                <div class="col-xl-10 col-lg-9 mx-auto">
+            <div class="container col-xl-12 col-lg-11 col-sm-10 col-10">
+                <div class=" mx-auto">
                     <div class="bg-faded rounded p-5">
-                        <div class="container w-75 p-5 wtf-form">
+                        <div class="container p-5 wtf-form">
                             {{ wtf.quick_form(form, novalidate=True) }}
                         </div>
                         <h4 class="p-2">Sprawdź najlepsze!</h4>
                         <div class="row">
                         {% for cafe in cafes %}
-                            <div class="card col-lg-4 show-card">
+                            <div class="card show-card">
                                 <div class="cafe-img-container">
                                 <div class="cafe-img">
                                         <img class="card-img-top" src="{{ url_for('static', filename='assets/img/cafes/{}.jpg'.format(cafe.id) ) }}" alt="Card image cap">

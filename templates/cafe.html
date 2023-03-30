@@ -90,7 +90,7 @@
                                     {% for review in cafe.reviews %}
 
                                     <div class="row p-3">
-                                        <div class="score-review col-lg-4 ">
+                                        <div class="score-review col-lg-5 ">
                                             <ul class="list-group list-group-flush rounded ">
                                               <li class="list-group-item">
                                                       <h6><b>{{review.review_author.name}}</b></h6>
@@ -102,7 +102,7 @@
                                             </ul>
                                         </div>
 
-                                        <div class="text-review col-lg-8">
+                                        <div class="text-review col-lg-7">
                                             <div class="reviewText d-flex">
                                                 {{review.text|safe}}
                                             </div>
@@ -120,13 +120,13 @@
             <div class="container">
                 <div class="about-heading-content">
                     <div class="row">
-                        <div class="col-xl-9 col-lg-10 mx-auto">
+                        <div class="col-sm-11 col-12 mx-auto">
                             <div class="bg-faded rounded p-5">
                                 <h2 class="section-heading mb-4">
                                     <span class="section-heading-upper">Odwiedziłeś już to miejsce?</span>
                                 </h2>
                                 <p class="mb-0">Podziel się swoją opinią!</p>
-                                <div class="container w-100 p-3 pb-0">
+                                <div class="container p-2 pb-0">
                                     {% with messages = get_flashed_messages() %}
                                         {% if messages %}
                                             {% for message in messages %}
@@ -135,8 +135,7 @@
                                         {% endif %}
                                     {% endwith %}
                                 </div>
-                                <div class="container w-100 p-3">
-
+                                <div class="container p-2">
                                 <!--           Comments Area -->
                                     {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
                                 {{ ckeditor.load() }}
