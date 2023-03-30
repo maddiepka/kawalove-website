@@ -5,7 +5,7 @@
             <div class="container col-xl-10 col-lg-11 col-sm-12 col-12">
                 <div class=" mx-auto">
                     <div class="bg-faded rounded p-5">
-                        <div class="container p-5 wtf-form">
+                        <div class="container p-2 wtf-form">
                             {{ wtf.quick_form(form, novalidate=True) }}
                         </div>
                         <h4 class="p-2">Sprawdź najlepsze!</h4>
@@ -37,7 +37,7 @@
                                         {% if cafe.avg_coffee %}
                                             {{ cafe.avg_coffee }}
                                         {% else %}
-                                            Oceń pierwszy!
+                                            Oceń!
                                         {% endif %}
                                     </p>
                                 </li>
@@ -47,7 +47,7 @@
                                         {% if cafe.avg_wifi %}
                                             {{ cafe.avg_wifi }}
                                         {% else %}
-                                            Oceń pierwszy!
+                                            Oceń!
                                         {% endif %}
                                     </p>
                                 </li>
@@ -57,7 +57,7 @@
                                         {% if cafe.avg_power %}
                                             {{ cafe.avg_power }}
                                         {% else %}
-                                            Oceń pierwszy!
+                                            Oceń!
                                         {% endif %}
                                     </p>
                                 </li>

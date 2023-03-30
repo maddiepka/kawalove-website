@@ -119,30 +119,31 @@
         <section id="new-comment" class="page-section cta">
             <div class="container">
                 <div class="about-heading-content">
-                    <div class="row">
-                        <div class="col-sm-11 col-12 mx-auto">
-                            <div class="bg-faded rounded p-5">
-                                <h2 class="section-heading mb-4">
+                    <div class="row col-sm-11 col-12 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <div class="col-lg-9 col-sm-11 col-12">
+                                <h2 class="section-heading">
                                     <span class="section-heading-upper">Odwiedziłeś już to miejsce?</span>
                                 </h2>
                                 <p class="mb-0">Podziel się swoją opinią!</p>
-                                <div class="container p-2 pb-0">
-                                    {% with messages = get_flashed_messages() %}
-                                        {% if messages %}
-                                            {% for message in messages %}
-                                                <p class="error"> {{ message }} </p>
-                                            {% endfor %}
-                                        {% endif %}
-                                    {% endwith %}
-                                </div>
-                                <div class="container p-2">
-                                <!--           Comments Area -->
-                                    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
-                                {{ ckeditor.load() }}
-                                {{ ckeditor.config(name='text') }}
-                                </div>
+                            </div>
+                            <div class="container  col-lg-9 col-sm-11 col-12 p-2 pb-0">
+                                {% with messages = get_flashed_messages() %}
+                                    {% if messages %}
+                                        {% for message in messages %}
+                                            <p class="error"> {{ message }} </p>
+                                        {% endfor %}
+                                    {% endif %}
+                                {% endwith %}
+                            </div>
+                            <div class="container  col-lg-9 col-sm-11 col-12 p-2">
+                            <!--           Comments Area -->
+                                {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                            {{ ckeditor.load() }}
+                            {{ ckeditor.config(name='text') }}
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>

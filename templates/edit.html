@@ -5,10 +5,10 @@
             <div class="container">
                 <div class="about-heading-content">
                     <div class="row">
-                        <div class="col-xl-9 col-lg-10 col-11 mx-auto">
+                        <div class="col-xl-9 col-lg-10 col-12 mx-auto">
                             <div class="bg-faded rounded p-5">
 
-                                <div class="container p-3 pb-0">
+                                <div class="container p-2 pb-0">
                                     {% with messages = get_flashed_messages() %}
                                         {% if messages %}
                                             {% for message in messages %}
@@ -17,7 +17,7 @@
                                         {% endif %}
                                     {% endwith %}
                                 </div>
-                                <div class="container  p-3">
+                                <div class="container  p-2">
                                     {{ wtf.quick_form(form, novalidate=True) }}
                                 </div>
                             </div>
