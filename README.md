@@ -26,14 +26,14 @@ BOOTSTRAP (na bazie https://startbootstrap.com/theme/business-casual)
 
 **Screeny:**
 
-![a index page screenshot](maddiepka/kawalove-website/static/assets/screens/index.jpg)
-![a cafes page screenshot](maddiepka/kawalove-website/static/assets/screens/cafes_1.jpg)
-![a cafes page screenshot](maddiepka/kawalove-website./static/assets/screens/cafes_2.jpg)
-![a example cafe page screenshot](maddiepka/kawalove-website/static/assets/screens/cafe_1.jpg)
-![a example cafe page screenshot](maddiepka/kawalove-website/static/assets/screens/cafe_2.jpg)
-![an add page screenshot](maddiepka/kawalove-website/static/assets/screens/add.jpg)
-![a login page screenshot](maddiepka/kawalove-website/static/assets/screens/login.jpg)
-![a register page screenshot](maddiepka/kawalove-website/static/assets/screens/register.jpg)
+![a index page screenshot](./static/assets/screens/index.jpg)
+![a cafes page screenshot](./static/assets/screens/cafes_1.jpg)
+![a cafes page screenshot](./static/assets/screens/cafes_2.jpg)
+![a example cafe page screenshot](./static/assets/screens/cafe_1.jpg)
+![a example cafe page screenshot](./static/assets/screens/cafe_2.jpg)
+![an add page screenshot](./static/assets/screens/add.jpg)
+![a login page screenshot](./static/assets/screens/login.jpg)
+![a register page screenshot](./static/assets/screens/register.jpg)
 
 
 
